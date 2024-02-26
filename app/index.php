@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <?php include('header.php');?>
+  <?php include('../conf/config.php');?>
   <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
       <!-- Preloader -->
@@ -26,7 +27,7 @@
         <!-- /.content-header -->
 
         <!-- Main content -->
-        <?php include('dashboard.php') ?>
+        <?php include('data_mahasiswa.php') ?>
         <!-- /.content -->
       </div>
       <!-- /.content-wrapper -->

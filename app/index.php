@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+  <?php
+  session_start();
+  ?>
   <?php include('header.php');?>
   <?php include('../conf/config.php');?>
   <body class="hold-transition sidebar-mini layout-fixed">

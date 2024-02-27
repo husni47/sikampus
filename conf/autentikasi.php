@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include ('config.php');
 $username = $_POST ['username'];
 $password = $_POST ['password'];
@@ -8,7 +9,11 @@ if(mysqli_num_rows($query)==1){
 // echo $username;
 // echo $password;
 //kita buat jika login berhasil maka akan menuju halaman dashboard
-header('location:../app');
+    header('location:../app');
+    $user = mysqli_fetch_array($query);
+    $_SESSION['nama'] = $user['nama'];
+    $_SESSION['level'] = $user['level'];
+
 }
 else if ($username == '' || $password == '') {
     header('location:../index.php?error=2');
@@ -16,6 +21,6 @@ else if ($username == '' || $password == '') {
 else {
 // echo "login tidak berhasil";
 //jika login berhasil maka akan menuju halaman dashboard
-header('location:../index.php?error=1');
+    header('location:../index.php?error=1');
 }
 ?>

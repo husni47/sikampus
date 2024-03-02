@@ -45,5 +45,13 @@
                   </li>
                 </ul>
               </li>
+              <li class="nav-item">
+                <a href="logout.php" class="nav-link">
+                  <i class="nav-icon fas fa-power-off"></i>
+                  <p>
+                    Logout
+                  </p>
+                </a>
+              </li>
             </ul>
           </nav>

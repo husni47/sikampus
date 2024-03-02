@@ -2,6 +2,9 @@
 <html lang="en">
   <?php
   session_start();
+  if(!$_SESSION['nama']){
+    header('Location: ../index.php?session=expired');
+  }
   ?>
   <?php include('header.php');?>
   <?php include('../conf/config.php');?>

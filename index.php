@@ -13,8 +13,6 @@
   <link rel="stylesheet" href="app/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="app/dist/css/adminlte.min.css">
-  <!-- SweetAlert2 -->
-  <link rel="stylesheet" href="app/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css"/>
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">

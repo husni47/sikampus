@@ -38,7 +38,10 @@
                     <td><?php echo $mhs['nama'];?></td>
                     <td><?php echo $mhs['nim'];?></td>
                     <td><?php echo $mhs['semester'];?></td>
-                    <td>X</td>
+                    <td><a onclick="hapus_data(<?php echo $mhs['id'];?>)" class="btn btn-sm btn-danger">Hapus</a></td>
+                    <!-- tanpa database hanya menampilkan alert ok 
+                      <td><a onclick="hapus_data()" class="btn btn-sm btn-danger">Hapus</a></td> 
+                    -->
                   </tr>
                   <?php } ?>
                   </tbody>
@@ -129,6 +132,42 @@
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
 <!-- Page specific script -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+  function hapus_data(data_id){
+    //alert belum muncul tapi sudah terhapus di database
+    // window.location=("delete/hapus_data.php?id="+data_id);
 
+    // tanpa database hanya menampilkan alert ok 
+    // alert("ok");
+
+  //alert muncul peringatan data terhapus tand checklist
+  //   Swal.fire({
+  //     title: "Good job!",
+  //     text: "You clicked the button!",
+  //     icon: "success"
+  //   });
+
+  //alert A dialog with three buttons
+    Swal.fire({
+      title: "Do you want to save the changes?",
+      // showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: "Hapus Data",
+      confirmButtonColor: "#cd5c5c",
+      // denyButtonText: `Don't save`,
+      timer: 8000,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        Swal.fire("Saved!", "", "success");
+        window.location=("delete/hapus_data.php?id="+data_id);
+      } 
+      // else if (result.isDenied) {
+      //   Swal.fire("Changes are not saved", "", "info");
+      // }
+    });
+  }
+</script>
 </body>
 </html>

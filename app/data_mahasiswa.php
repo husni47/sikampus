@@ -38,10 +38,14 @@
                     <td><?php echo $mhs['nama'];?></td>
                     <td><?php echo $mhs['nim'];?></td>
                     <td><?php echo $mhs['semester'];?></td>
-                    <td><a onclick="hapus_data(<?php echo $mhs['id'];?>)" class="btn btn-sm btn-danger">Hapus</a></td>
+                    <td>
+                      <a onclick="hapus_data(<?php echo $mhs['id'];?>)" class="btn btn-sm btn-danger">Hapus</a>
                     <!-- tanpa database hanya menampilkan alert ok 
                       <td><a onclick="hapus_data()" class="btn btn-sm btn-danger">Hapus</a></td> 
                     -->
+                    <!-- mengirim parameter [id] url ke editdata.php -->
+                      <a href="index.php?page=edit-data&&id=<?php echo $mhs['id'];?>" class="btn btn-sm btn-success">Edit</a>
+                    </td>
                   </tr>
                   <?php } ?>
                   </tbody>
